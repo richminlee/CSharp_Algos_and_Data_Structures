@@ -1,0 +1,22 @@
+771. Jewels and Stones
+
+public class Solution {
+    public int NumJewelsInStones(string J, string S) {
+        Dictionary<char, int> stoneHash = new Dictionary<char, int>();
+        int result = 0;
+        for (int i = 0; i < S.Length; i++){
+            if(stoneHash.ContainsKey(S[i])){
+                stoneHash[S[i]]++;
+            }
+            else{
+                stoneHash.Add(S[i], 1);
+            }
+        }
+        for(int i = 0; i < J.Length; i++){
+            if(stoneHash.ContainsKey(J[i])){
+                result+=stoneHash[J[i]];
+            }
+        }
+        return result;
+    }
+}

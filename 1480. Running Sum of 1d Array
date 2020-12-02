@@ -1,0 +1,17 @@
+1480. Running Sum of 1d Array
+
+public class Solution {
+    public int[] RunningSum(int[] nums) {
+        List<int> sumList = new List<int>();
+        for(int i = 0; i< nums.Length; i++){
+            if(sumList.Count == 0){
+                sumList.Add(nums[i]);
+            }
+            else{
+                sumList.Add(sumList[sumList.Count-1] + nums[i]);
+            }
+        }
+        return sumList.ToArray();
+        
+    }
+}

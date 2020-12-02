@@ -1,0 +1,17 @@
+1672. Richest Customer Wealth
+
+public class Solution {
+    public int MaximumWealth(int[][] accounts) {
+        int maxWealth = 0;
+        for(int i = 0; i < accounts.Length; i++){
+            int tempWealth = 0;
+            for(int j = 0; j < accounts[i].Length; j++){
+                tempWealth += accounts[i][j];
+            }
+            if(maxWealth < tempWealth){
+                maxWealth = tempWealth;
+            }
+        }
+        return maxWealth;
+    }
+}

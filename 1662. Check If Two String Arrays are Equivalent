@@ -1,0 +1,9 @@
+1662. Check If Two String Arrays are Equivalent
+
+public class Solution {
+    public bool ArrayStringsAreEqual(string[] word1, string[] word2) {
+        string string1 = String.Join("", word1);
+        string string2 = String.Join("", word2);
+        return string1 == string2 ? true : false;
+    }
+}

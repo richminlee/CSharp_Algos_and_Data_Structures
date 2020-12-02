@@ -1,0 +1,19 @@
+1281. Subtract the Product and Sum of Digits of an Integer
+
+public class Solution {
+    public int SubtractProductAndSum(int n) {
+        int prodDigit = n;
+        int product = 1;
+        int sumDigit = n;
+        int sum = 0;
+        while(prodDigit != 0){
+            product *= (prodDigit % 10);
+            prodDigit /= 10;
+        }
+        while(sumDigit != 0){
+            sum += (sumDigit % 10);
+            sumDigit /= 10;
+        }
+        return product - sum;
+    }
+}
